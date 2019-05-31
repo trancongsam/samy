@@ -1,9 +1,9 @@
-(function () {
+//(function () {
     angular.module('app.components.setting')
         .controller('SettingController', SettingController);
 
-    SettingController.$inject = ['$state', '$localStorage', 'messageShow', '$timeout', '$timeout'];
-    function SettingController($state, $localStorage, messageShow, $timeout) {
+    //SettingController.$inject = ['$state', '$localStorage', 'messageShow', '$timeout', '$timeout'];
+    //function SettingController($state, $localStorage, messageShow, $timeout) {
 
         var vm = this;
         vm.connected1 = false;
@@ -100,7 +100,7 @@
         vm.index1 = 0;
         vm.index2 = 0;
         // called when the client connects
-        function onConnect() {
+        //function onConnect() {
             // Once a connection has been made, make a subscription and send a message.
             console.log("onConnect");
             client.subscribe("event1");
@@ -110,7 +110,7 @@
             });
         }
 
-        function onConnect2() {
+       // function onConnect2() {
             // Once a connection has been made, make a subscription and send a message.
             console.log("onConnect2");
             client2.subscribe("event2");
@@ -172,7 +172,7 @@
                 vm.wait2 = false;
             }
         }
-        function send(id) {
+        //function send(id) {
             if (id == 1) {
                 vm.zone1[vm.index1] = vm.item1;
                 $localStorage.zone1 = vm.zone1;
